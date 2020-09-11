@@ -1,0 +1,19 @@
+{
+  "name": "szh.js.codewars",
+  "version": "1.0.0",
+  "description": "Solved Katas from Codewars https://www.codewars.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "entry",
+    "point:",
+    "(index.js)"
+  ],
+  "author": "test command: jest",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}
