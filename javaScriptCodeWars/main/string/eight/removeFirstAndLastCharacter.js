@@ -9,4 +9,12 @@ function removeChar(str){
     return str.substring(1, str.length-1);
 };
 
+/*
+more sophisticated solution
+function removeChar(str) {
+  return str.slice(1, -1);
+}
+ */
+
+
 module.exports = {removeChar};
