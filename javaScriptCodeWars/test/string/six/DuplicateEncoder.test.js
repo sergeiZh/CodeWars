@@ -1,4 +1,4 @@
-const {duplicateEncode} = require('../../../main/string/seven/DuplicateEncoder');
+const {duplicateEncode} = require('../../../main/string/six/DuplicateEncoder');
 
 test('Shoud return ( for non-duplicated letters in a word and ) for duplicated', () => {
     expect(duplicateEncode('din')).toEqual('(((');
