@@ -1,5 +1,13 @@
 package com.zh.sergei.codewars.arrays.eight;
 
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
@@ -13,8 +21,24 @@ import java.util.stream.IntStream;
  */
 public class SumOfPositive {
 
-    public static int sum(int[] arr){
-        return IntStream.of(arr).filter(value -> value > 0).sum();
+    public static int sum(int[] arr) {
+        return IntStream.of(arr)
+                        .filter(value -> value > 0)
+                        .sum();
     }
 
+
+    public static int sumReactive(int[] arr) {
+        List<Integer> output = new ArrayList<>();
+        Integer[] integers = Arrays.stream(arr)
+                                   .boxed()
+                                   .collect(Collectors.toList())
+                                   .toArray(new Integer[]{});
+        Flux.fromArray(integers)
+            .filter(inte -> inte > 0)
+            .reduce(0, Integer::sum)
+            .subscribe(output::add);
+
+        return output.get(0);
+    }
 }

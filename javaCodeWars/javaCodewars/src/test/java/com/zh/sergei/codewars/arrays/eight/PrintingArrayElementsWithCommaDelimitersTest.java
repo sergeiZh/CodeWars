@@ -14,4 +14,10 @@ public class PrintingArrayElementsWithCommaDelimitersTest {
         assertThat(PrintingArrayElementsWithCommaDelimiters.printArray(new String[]{"h", "e", "l", "l", "o"})).isEqualTo("h,e,l,l,o");
         assertThat(PrintingArrayElementsWithCommaDelimiters.printArray(new Integer[]{3, 4, 1, 2})).isEqualTo("3,4,1,2");
     }
+
+    @Test
+    public void printArrayReactive_shouldConcatenateArrayElementWithCommaAsSeparator(){
+        assertThat(PrintingArrayElementsWithCommaDelimiters.printArrayReactive(new String[]{"h", "e", "l", "l", "o"})).isEqualTo("h,e,l,l,o");
+        assertThat(PrintingArrayElementsWithCommaDelimiters.printArrayReactive(new Integer[]{3, 4, 1, 2})).isEqualTo("3,4,1,2");
+    }
 }

@@ -14,4 +14,13 @@ public class SumOfPositiveTest {
         assertThat(SumOfPositive.sum(new int[]{-1,-2,-3,-4,-5})).isEqualTo(0);
         assertThat(SumOfPositive.sum(new int[]{-1,2,3,4,-5})).isEqualTo(9);
     }
+
+    @Test
+    public void sumReactive_shouldSummAllPositiveNumbersOfProvidedArray(){
+        assertThat(SumOfPositive.sumReactive(new int[]{1,2,3,4,5})).isEqualTo(15);
+        assertThat(SumOfPositive.sumReactive(new int[]{1,-2,3,4,5})).isEqualTo(13);
+        assertThat(SumOfPositive.sumReactive(new int[]{})).isEqualTo(0);
+        assertThat(SumOfPositive.sumReactive(new int[]{-1,-2,-3,-4,-5})).isEqualTo(0);
+        assertThat(SumOfPositive.sumReactive(new int[]{-1,2,3,4,-5})).isEqualTo(9);
+    }
 }
