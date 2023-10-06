@@ -1,10 +1,8 @@
 package com.zh.sergei.codewars.arrays.eight;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
-import java.util.Arrays;
-
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class PrintingArrayElementsWithCommaDelimitersTest {
 

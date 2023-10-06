@@ -1,3 +1,6 @@
 .idea/
 
 *.iml
+
+typeScriptCodeWars/node_modules
+typeScriptCodeWars/output
