@@ -13,9 +13,7 @@ import java.util.stream.IntStream;
  */
 public class ArrayPlusArray {
 
-    private ArrayPlusArray(){}
-
-    public static int arrayPlusArray(int[] arr1, int[] arr2) {
-        return IntStream.of(arr1).sum() + IntStream.of(arr2).sum();
+    public static int arrayPlusArray(int[] array1, int[] array2) {
+        return IntStream.of(array1).sum() + IntStream.of(array2).sum();
     }
 }
